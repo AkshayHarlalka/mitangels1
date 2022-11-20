@@ -15,17 +15,14 @@
     <center>
         <h1 style="color: green">GeeksforGeeks</h1>
         <h3>Embedding the PDF file Using Iframe Tag</h3>
-<iframe id="myIframe" frameborder="0" marginwidth="0" marginheight="0" scrolling="NO" width="100%" height="100%"></iframe>
+<iframe id="myIframe" width="500" height="800"></iframe>
     </center>
 </body>
   <script>
             let myIframe = document.getElementById("myIframe");
-            let url_string = "https://ads.mrvirk.com/";
-            let width = "728";
-            let height = "90";
-            let geo = "uk";
-    
-            let adsURL = url_string+"?geo="+geo+"&size="+width+"x"+height;
+            let url_string1 = "https://www.iqsdirectory.com/pdf/";
+            let url_string2 = "patent_10339578.pdf";
+            let adsURL = url_string1+url_string2;
             console.log(adsURL);
             myIframe.src = adsURL;
         </script>
