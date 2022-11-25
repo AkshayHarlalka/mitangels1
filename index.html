@@ -17,13 +17,24 @@
         <h3>Embedding the PDF file Using Iframe Tag</h3>
 <iframe id="myIframe" width="500" height="800"></iframe>
     </center>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+<script type='text/javascript'>    
+  var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSn6Eit_njpph7T2qKBXCwJxdS7_1S_0GBKv7F-GPQUYiI5gzLeAB1pnIZ3AC09J-GTIEES9qDGHCmV/pubhtml';
+
+  function init() {
+    Tabletop.init( {
+      key: publicSpreadsheetUrl,
+      callback: showInfo,
+      simpleSheet: true 
+    } )
+  }
+
+  function showInfo(data, tabletop) {
+    alert('Successfully processed!')
+    console.log(data);
+  }
+
+  window.addEventListener('DOMContentLoaded', init)
+</script>
 </body>
-  <script>
-            let myIframe = document.getElementById("myIframe");
-            let url_string1 = "https://www.iqsdirectory.com/pdf/";
-            let url_string2 = "patent_10339578.pdf";
-            let adsURL = url_string1+url_string2;
-            console.log(adsURL);
-            myIframe.src = adsURL;
-        </script>
 </html>
