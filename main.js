@@ -32,3 +32,6 @@ data.forEach(function(data) {
  });
 }
   window.addEventListener('DOMContentLoaded', init)
+
+
+
